@@ -121,14 +121,4 @@ class Vehicle {
     print "The vehicle {$this->license_plate} has been stopped and turned off permanently.<br>";
   }
 }
-
-$car = new Vehicle("Mazda", 5, 18, "XYZ-9870");
-$car->startEngine();
-$car->accelerate(2);
-$car->slowDown();
-$car->stopEngine();
-$car->fillTank(6);
-
-unset($car);
-
 ?>
