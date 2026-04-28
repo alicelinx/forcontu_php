@@ -93,9 +93,22 @@ class Vehicle {
       print "The vehicle ({$this->license_plate}) has been filled with $quantity liters of fuel.<br>";
     }    
   }
+
+  public function __construct($brand, $seats, $fuel_capacity, $license_plate) {
+    $this->brand = $brand;
+    $this->seats = $seats;
+    $this->fuel_capacity = $fuel_capacity;
+    $this->license_plate = $license_plate;
+
+    $this->fuel_level = 0;
+    $this->current_speed = 0;
+    $this->state = "off";
+  
+    print "Vehicle {$this->brand} with license plate {$this->license_plate} has been registered.<br>";
+  }
 }
 
-$car = new Vehicle();
+$car = new Vehicle("Mazda", 5, 18, "XYZ-9870");
 $car->startEngine();
 $car->accelerate(2);
 $car->slowDown();
