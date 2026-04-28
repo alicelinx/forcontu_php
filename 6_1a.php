@@ -106,18 +106,29 @@ class Vehicle {
   
     print "Vehicle {$this->brand} with license plate {$this->license_plate} has been registered.<br>";
   }
+
+  public function __destruct() {
+    // slow down until the vehicle stops
+    while ($this->current_speed > 0) {
+      $this->slowDown();
+    }
+
+    // turn off the engine
+    if ($this->state === "on") {
+      $this->stopEngine();
+    }
+
+    print "The vehicle {$this->license_plate} has been stopped and turned off permanently.<br>";
+  }
 }
 
 $car = new Vehicle("Mazda", 5, 18, "XYZ-9870");
 $car->startEngine();
 $car->accelerate(2);
 $car->slowDown();
-$car->slowDown();
-$car->slowDown();
-$car->stopEngine();
 $car->stopEngine();
 $car->fillTank(6);
-$car->fillTank(1);
-$car->fillTank(1);
+
+unset($car);
 
 ?>
