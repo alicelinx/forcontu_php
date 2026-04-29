@@ -6,6 +6,7 @@ class Vehicle {
   public $seats = 5;
   public $fuel_capacity = 15;
   public $license_plate = "ABC-1234";
+  public $type = "";
 
   protected $fuel_level = 10;
   protected $current_speed = 0;
