@@ -7,6 +7,7 @@ class Vehicle {
   public $fuel_capacity = 15;
   public $license_plate = "ABC-1234";
   public $type = "";
+  public static $vehicle_types = ["motorcyle", "car", "truck"];
 
   protected $fuel_level = 10;
   protected $current_speed = 0;
@@ -22,6 +23,10 @@ class Vehicle {
 
   public function getLicensePlate() {
     return $this->license_plate;
+  }
+
+  public static function getVehicleTypes() {
+    return self::$vehicle_types;
   }
 
   public function setFuelLevel($fuel_level) {
@@ -122,4 +127,5 @@ class Vehicle {
     print "The vehicle {$this->license_plate} has been stopped and turned off permanently.<br>";
   }
 }
+print_r(Vehicle::getVehicleTypes());
 ?>
