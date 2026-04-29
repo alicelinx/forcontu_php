@@ -80,7 +80,7 @@ class Vehicle {
   }
 
   public function stopEngine() {
-    if ($this->state === "on" && $this->current_speed === 0) {
+    if ($this->state === "on" && $this->current_speed <= 0) {
       $this->state = "off";
       print "The vehicle ({$this->license_plate}) has been turned off.<br>";
     } else {
@@ -127,5 +127,4 @@ class Vehicle {
     print "The vehicle {$this->license_plate} has been stopped and turned off permanently.<br>";
   }
 }
-print_r(Vehicle::getVehicleTypes());
 ?>

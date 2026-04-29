@@ -1,5 +1,4 @@
 <?php
-require '6_1a.php';
 use php\Vehicles\Vehicle;
 
 class Car extends Vehicle {
