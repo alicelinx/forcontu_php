@@ -1,7 +1,9 @@
 <?php
 require '6_4a.php';
+require '6_6a.php';
 
 class Cat extends Pet {
+  use Insurance;
   private $name;
   public static $max_feed;
   private $feed = 0;
