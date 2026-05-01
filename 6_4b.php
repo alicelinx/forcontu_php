@@ -4,7 +4,7 @@ require '6_6a.php';
 
 class Cat extends Pet {
   use Insurance;
-  private $name;
+  public $name;
   public static $max_feed;
   private $feed = 0;
 
@@ -15,6 +15,9 @@ class Cat extends Pet {
   }
 
   public function feed($quantity) {
+    if ($quantity + $this->feed > self::$max_feed) {
+      throw new Exception("You can't feed the cat that much.");
+    }
     $this->feed += $quantity;
   }
 }
