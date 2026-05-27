@@ -20,6 +20,6 @@ echo "SELECT t1.emp_no
       LEFT JOIN emp_fired t2 
       ON t1.emp_no = t2.emp_no 
       WHERE t1.gender = 'F' 
-      AND t1.hire_date >= '1999-01-01';
+      AND t1.hire_date >= '1999-01-01' 
       AND t2.emp_no IS NULL;";
 ?>
