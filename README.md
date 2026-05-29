@@ -7,7 +7,7 @@ This repo documents my progress through the Backend Development module, covering
 - [x] PHP fundamentals & API functions
 - [x] Object Oriented Programming
 - [x] Design Patterns
-- [ ] MySQL & database management tools
+- [x] MySQL & database management tools
 - [ ] Symfony components
 - [ ] Drupal architecture & installation
 - [ ] Drush
